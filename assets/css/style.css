@@ -447,6 +447,15 @@ section {
     outline: 1px solid rgba(255, 255, 255, 0.1);
     gap: 20px;
 }
+#contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
 
 #loader {
     position: fixed;

@@ -51,9 +51,12 @@ fetch('https://twitchtracker.com/api/channels/summary/akwaarium')
     .then(response => response.json())
     .then(data => {
         document.getElementById('followers').textContent = data.followers_total;
+        document.getElementById('follows').textContent = data.followers;
         document.getElementById('media').textContent = data.avg_viewers;
         document.getElementById('views').textContent = data.max_viewers;
         document.getElementById('horas').textContent = data.hours_watched;
+        const horasStreamed = Math.floor(data.minutes_streamed / 60);
+        document.getElementById('minutos').textContent = horasStreamed;
     });
 
 // loader + animação de entrada do site

@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #02010e;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    width: 50%;
+    height: 70px;
+    padding: 0 20px;
+
+    border: 1px solid rgba(204, 0, 255, 0.2);
+    border-radius: 10px;
+
+    background-color: rgba(49, 49, 49, 0.25);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+/* ESQUERDA (NICK) */
+.nick {
+    
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-right: auto;
+}
+
+/* CENTRO (CONTAINER VISUAL) */
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* LINKS DO MENU */
+.menu-1,
+.menu-2 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-1 a,
+.menu-2 a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+/* HOVER LINKS */
+.menu-1 a:hover,
+.menu-2 a:hover {
+    color: #ff00aa;
+}
+
+/* DIREITA (CTA) */
+.cta {
+    margin-left: auto;
+}
+
+/* BOTÃO SUB */
+.sub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: linear-gradient(45deg, #ff00aa, #a200ff);
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/* HOVER SUB */
+.sub:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff00aa;
+}
+
+/* ÍCONE DO BOTÃO */
+.sub img {
+    width: 18px;
+    height: 18px;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%; /* Ocupa a tela toda */
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    scroll-snap-align: start; /* Cada seção será um ponto de parada */
+    
+}
+
+#inicio {
+    height: 100vh;
+    width: 100%;
+
+    background: url("../img/akwaarium3.png") no-repeat right center;
+    background-size: cover;
+    background-position: left 300px center;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+#inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(5, 0, 20, 0.5) 25%,
+        transparent 100%
+    );
+
+    z-index: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+
+    max-width: 600px;
+    margin-left: 18%; /* 🔥 empurra pra esquerda bonito */
+}
+.texto {
+    align-items: flex-start; /* 🔥 isso muda tudo */
+    text-align: left;
+}
+.sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+   
+    position: relative;
+    z-index: 10;
+    outline: 1px solid rgba(255, 0, 170);
+    
+}
+
+
+.texto {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    
+}
+.texto h1 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+    letter-spacing: 0px;
+    color: white;
+}
+.texto h2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 900;
+    font-style: bold;
+    font-size: 25px;
+    background: -webkit-linear-gradient(45deg,#a200ff, #ff00aa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 10px;
+    
+}
+.p-1 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: rgb(189, 189, 189);
+    margin-top: 0px;
+}
+.p-2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 0px;
+    color: rgb(189, 189, 189);
+    margin-top: 20px;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    z-index: 10;
+    
+}
+.sub2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(45deg, #ff00aa, #a200ff);
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    margin: 10px;
+    
+}
+.sub2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff00aa;
+}
+
+
+.sub2 img {
+    width: 18px;
+    height: 18px;
+}
+
+.assistir-live {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(45deg, #ff00aa, #a200ff);
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.assistir-live:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ff00aa;
+}
+
+
+
+.live {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top:4%;
+    margin-bottom: 2%;
+    
+}
+.player {
+    width: 80vh;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.player iframe {
+    width: 100%;
+    height: 100%;
+}
+.chat {
+    width: 20%;
+    height: 60vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chat iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.part-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+.h1-parceiros {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 14px;
+    color: white;
+    padding: 1%;
+}
+.linha {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #a200ff);
+}
+.linha-2 {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #a200ff, transparent);
+}
+
+.partners {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    
+
+    
+}
+
+.logo {
+    padding: 0 40px;
+    opacity: 0.7;
+    transition: 0.3s;
+    
+}
+.logo img {
+    max-height: 140px;
+    filter: grayscale(100%);
+  
+}
+.logo:hover {
+    opacity: 1;
+}
+
+.logo:hover img {
+    filter: grayscale(0%);
+}
+.divisor {
+    width: 1px;
+    height: 140px;
+    background: rgba(255,255,255,0.1);
+}
+
+.mediakit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 111px 0;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #0b0b0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* As caixas maiores ocupam duas colunas */
+.stat-box.big {
+  grid-column: span 2;
+}
+
+
+/* container da barra */
+.progress-container {
+    width: 300px;
+    height: 8px;
+    background: #1a1a22;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* barra que enche */
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #7a00ff, #ff00aa);
+    transition: width 0.3s ease;
+}
+
+/* animação do loader saindo */
+#loader.fade-out {
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+/* conteúdo do site começa escondido para animar depois */
+#content {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* quando o JS adicionar .show, o site aparece */
+#content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#welcome-text {
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 3px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+/* quando aparecer */
+#welcome-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}

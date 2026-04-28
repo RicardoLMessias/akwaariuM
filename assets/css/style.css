@@ -98,8 +98,7 @@ header {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
-
-    transition: 0.3s;
+    transition: 0.3s;    
 }
 
 /* HOVER SUB */
@@ -394,6 +393,9 @@ section {
     justify-content: center;
     align-items: center;
     height: 40vh;
+    background: url('/assets/img/mediakit.png') no-repeat right center;
+    background-size: cover;
+
     
 }
 .mediakit-content {
@@ -451,11 +453,216 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 40vh;
     color: white;
     font-size: 24px;
     font-weight: 600;
 }
+.contato-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+}
+.contato-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+.contato-text h1 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 0px;
+    color: white;
+}
+.contato-text p {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: rgb(189, 189, 189);
+    text-align: center;
+    line-height: 1.6;
+}
+.contato-form {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+.contato-form form input {
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    background-color: rgba(46, 0, 58, 0.8);
+    color: white;
+}
+.contato-form form input::selection {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(224, 98, 255, 1);
+    color: white;
+}
+.contato-form form textarea {
+    width: 100%;
+    height: 150px;
+    padding-left:  10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(46, 0, 58, 0.8);
+    color: white;
+   
+}
+.contato-form form textarea::selection {
+    padding: 50px;
+    border-radius: 2px;
+    border: none;
+    background-color: rgb(224, 98, 255, 1);
+    color: white;
+}
+.contato-form form button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: linear-gradient(45deg, #ff00aa, #a200ff);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.contato-form form button:hover {
+    scale: 1.05;
+    box-shadow: 0 0 12px #ff00aa;
+}
+
+
+
+
+.contato-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(31, 0, 59, 0.377);
+    width: 100%;
+    height: 28%;
+    gap: 90px;
+}
+
+.contato-footer-info {
+    display: flex;
+    flex-direction:column;
+    justify-content:start;
+    align-items: left;
+    text-align: left;
+    width: 20%;
+    height: 80%;
+    
+}
+.contato-footer-info h2 {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: 0px;
+    color: white;
+}
+.contato-footer-info p {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: rgb(194, 194, 194);
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.6;
+  
+}
+.contato-footer-links {
+    display: flex;
+    flex-direction: column;
+
+    justify-content:start;
+    align-items: center;
+    text-align: left;
+    width: 20%;
+    height: 80%;
+
+}
+.contato-footer-links p{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contato-footer-links a {
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.contato-email {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    padding: 0px 60px 0px ;
+    gap: 5px;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    width: 20%;
+    height: 80%;
+}
+.contato-email p {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: rgb(255, 255, 255);
+    text-align: left;   
+}
+.contato-email a {
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 1s;
+}
+.contato-email img {
+    margin: 10px;
+    max-height: 30px;
+    transition: 0.3s;
+    
+}
+.contato-email img:hover {
+    scale: 1.2;
+}
+
 
 #loader {
     position: fixed;
@@ -524,4 +731,259 @@ section {
 #welcome-text.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* ========================= */
+/* RESPONSIVIDADE GLOBAL */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+    header {
+        width: 90%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .texto h1 {
+        font-size: 60px;
+    }
+
+    .texto h2 {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+
+    .overlay {
+        margin-left: 8%;
+    }
+
+    .player {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .chat {
+        display: none; /* some no tablet */
+    }
+
+    .mediakit-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contato-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contato-text,
+    .contato-form {
+        width: 100%;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .menu-1,
+    .menu-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* HERO */
+    .overlay {
+        margin: 0;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .texto h1 {
+        font-size: 42px;
+    }
+
+    .texto h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .p-1 {
+        font-size: 18px;
+    }
+
+    .p-2 {
+        font-size: 14px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    /* LIVE */
+    .live {
+        flex-direction: column;
+    }
+
+    .player {
+        width: 100%;
+        height: 250px;
+    }
+
+    .chat {
+        display: none;
+    }
+
+    /* PARCEIROS */
+    .partners {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .divisor {
+        display: none;
+    }
+
+    /* MEDIAKIT */
+    .mediakit-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #mediakit {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    /* CONTATO */
+    #contato {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .contato-footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        height: auto;
+    }
+
+    .contato-footer-info,
+    .contato-footer-links,
+    .contato-email {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contato-footer-info p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* MOSTRA O BOTÃO */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 1100;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    /* ANIMAÇÃO */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ESCONDE MENU POR PADRÃO */
+    .menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+
+        background: rgba(20, 0, 40, 0.95);
+        backdrop-filter: blur(10px);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+        transform: translateY(-200%);
+        transition: 0.4s ease;
+    }
+
+    /* QUANDO ABRE */
+    .menu.active {
+        transform: translateY(0);
+    }
+
+    .menu-1,
+    .menu-2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* OPCIONAL: esconder botão sub */
+    .cta {
+        display: none;
+    }
 }

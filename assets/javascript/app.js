@@ -90,3 +90,32 @@ const interval = setInterval(() => {
 
     bar.style.width = progress + "%";
 }, 200);
+
+const hamburger = document.getElementById("hamburger");
+const menu = document.querySelector(".menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+});
+
+document.getElementById("formContato").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+        name: e.target.name.value,
+        email: e.target._replyto.value,
+        message: e.target.message.value
+    };
+
+    const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    });
+
+    const data = await res.json();
+    alert(data.message);
+});

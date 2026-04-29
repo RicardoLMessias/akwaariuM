@@ -749,7 +749,7 @@ section {
 /* ========================= */
 
 /* Tablets */
-@media (max-width: 1024px) {
+@media (max-width: 1624px) {
 
     header {
         width: 90%;
@@ -757,6 +757,9 @@ section {
 
     .menu {
         gap: 15px;
+    }
+    #inicio {
+        background-position: left 100px center;
     }
 
     .texto h1 {
@@ -821,6 +824,9 @@ section {
     .menu-2 {
         flex-direction: column;
         gap: 10px;
+    }
+    #inicio {
+        background-position: center;
     }
 
     .cta {

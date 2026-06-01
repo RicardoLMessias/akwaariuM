@@ -63,8 +63,3 @@ npm install
 
 Execução:
 Como o projeto utiliza uma pasta `/api` estruturada para funções Serverless, você pode rodá-lo localmente utilizando a CLI da sua plataforma de hospedagem (como a `vercel dev`) ou abrindo o arquivo `index.html` com a extensão Live Server no VS Code para testar a interface gráfica.
-
-📄 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-Layout e desenvolvimento por Akwaarium 💜

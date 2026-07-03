@@ -85,7 +85,7 @@ const interval = setInterval(() => {
                 content.classList.add("show");
             }, 500);
 
-        }, 1200); // tempo que o "BEM VINDO" fica na tela
+        }, 1500); // tempo que o "BEM VINDO" fica na tela
     }
 
     bar.style.width = progress + "%";
@@ -119,3 +119,40 @@ document.getElementById("formContato").addEventListener("submit", async (e) => {
     const data = await res.json();
     alert(data.message);
 });
+
+if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sections = gsap.utils.toArray("body > section");
+
+    sections.forEach((section) => {
+        const internalItems = section.querySelectorAll(
+            ":scope > div, .texto > *, .live > *, .part-titulo > *, .partners > *, .mediakit-content > *, .contato-content > *, .contato-footer > *"
+        );
+
+        if (internalItems.length) {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    markers: false,
+                    scrub: 3,
+                    end: "center center",
+                    toggleActions: "play none none reverse",
+                    invalidateOnRefresh: true
+                }
+            }).fromTo(internalItems,
+                { y: 64,
+                    opacity: 0
+                 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    stagger: 0.02
+                }
+            );
+        }
+    });
+}

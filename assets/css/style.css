@@ -37,12 +37,17 @@ header {
 
 /* ESQUERDA (NICK) */
 .nick {
-    
     color: #fff;
     font-size: 18px;
     font-weight: 900;
     margin-right: auto;
+    transition: 0.3s;
 }
+.nick:hover{
+    text-shadow: #fff 0px 0px 10px, #ff00aa 0px 0px 20px, #a200ff 0px 0px 30px;
+  
+}
+
 
 /* CENTRO (CONTAINER VISUAL) */
 .menu {
@@ -68,7 +73,6 @@ header {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-
     transition: 0.3s;
 }
 
@@ -393,7 +397,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 40vh;
-    background: url('/assets/img/mediakit.png') no-repeat right center;
+    background: url("../img/mediakit.png") no-repeat right center;
     background-size: cover;
 
     

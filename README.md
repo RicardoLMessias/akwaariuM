@@ -25,7 +25,7 @@ A versão atual foca na experiência do usuário, conversão de novos membros pa
 O projeto foi desenhado para ser escalável. Abaixo estão as melhorias mapeadas para as próximas versões:
 
 ### ⏳ Próximas Implementações (Média/Alta Prioridade)
-- [ ] **Segurança de Credenciais:** Migração de variáveis sensíveis (chaves de API e senhas de e-mail) para um arquivo `.env`.
+- [x] **Segurança de Credenciais:** credenciais de e-mail lidas de variáveis de ambiente (`EMAIL_USER`, `EMAIL_PASS`), nunca versionadas.
 - [ ] **Fallback de API:** Adicionar uma camada de cache ou dados estáticos de segurança caso a API de estatísticas falhe ou fique fora do ar.
 - [ ] **Testes de Performance:** Otimização de imagens do diretório `assets/img` para melhorar a nota no Google Lighthouse.
 
@@ -48,18 +48,20 @@ O ecossistema do projeto foi construído utilizando tecnologias web fundamentais
 ## 📦 Como Rodar o Projeto Localmente
 Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/akwaarium.git
+git clone https://github.com/RicardoLMessias/akwaariuM.git
 ```
 
 Entre na pasta do projeto:
 ```bash
-cd akwaarium
+cd akwaariuM
 ```
 
 Instale as dependências:
 ```bash
 npm install
 ```
+
+Configure as variáveis de ambiente copiando o `.env.example` para `.env` e preenchendo `EMAIL_USER` e `EMAIL_PASS` (na Vercel, cadastre-as em *Settings → Environment Variables*).
 
 Execução:
 Como o projeto utiliza uma pasta `/api` estruturada para funções Serverless, você pode rodá-lo localmente utilizando a CLI da sua plataforma de hospedagem (como a `vercel dev`) ou abrindo o arquivo `index.html` com a extensão Live Server no VS Code para testar a interface gráfica.
